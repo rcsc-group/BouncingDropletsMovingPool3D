@@ -12,5 +12,5 @@ Once the Basilisk structure is in place, the driver code here is built in order 
 The code can be executed by simply executing this shell script via *sh run_master_example.sh* inside a terminal. Output will then be produced within a foldering structure that consists of summary DNS execution information, mass conservation and VOF data, interface coordinates and animations, which can be used for further post-processing.
 
 ## Supplementary movies
-Supplementary material referred to in the companion manuscript have been made available in a separate subfolder, providing visualisations of both real-life and numerical experiments. Captions thereof are also included in the [relevant subfolder](https://github.com/rcsc-group/BouncingDropletsMovingPool3D/tree/main/SupplementaryMovies).
+Supplementary material referred to in the companion manuscript is made available in a [separate subfolder](https://github.com/rcsc-group/BouncingDropletsMovingPool3D/tree/main/SupplementaryMovies) (alongside descriptive captions), providing visualisations of both real-life and numerical experiments.
 
