@@ -1,5 +1,5 @@
 # Bouncing droplets onto a moving pool
-Direct numerical simulation code infrastructure for three-dimensional drop impact onto a moving pool, supporting collaborative work with the Harris Lab at Brown. The code complements the manuscript available on arXiv.
+Direct numerical simulation code infrastructure for three-dimensional drop impact onto a moving pool, supporting collaborative work with the Harris Lab at Brown. The code complements the manuscript available at [arXiv:2510.02220](https://arxiv.org/abs/2510.02220).
 <img width="100%" height="100%" alt="3D_SimulationSnapshot" src="https://github.com/user-attachments/assets/86635a45-fe4e-474c-997e-93bfe12b7299" />
 
 ## Installation
