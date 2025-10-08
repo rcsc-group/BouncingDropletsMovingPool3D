@@ -90,8 +90,8 @@ Two-phase non-coalescing fluid volume implementation is based on [V. Sanjay’s 
 
 Generates:
 
-- Summary files and movies in organized output folders
-- `.mp4` and `.png` animations for simulation data
+Summary files and movies in organized output folders:
+- `.mp4` animations for simulation data
 - Data files (interface data coordinates) for further analysis
 
 Visualisation can be toggled depending on your architecture and needs.
