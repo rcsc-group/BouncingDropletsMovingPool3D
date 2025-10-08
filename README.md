@@ -53,12 +53,12 @@ The script organizes outputs into folders with summaries and movies.
 
 ## ⚙️ Key Simulation Options
 
-Edit parameters in your driver code to control:
+Edit parameters across various layers to control:
 
-- Drop velocity $U_{\textrm{drop}}$
-- Pool velocity $U_{\textrm{pool}}$
-- Resolution and domain size
-- Output frequency and visualization options
+- Drop velocity $U_{\textrm{drop}}$ (via the shell script)
+- Pool velocity $U_{\textrm{pool}}$ (via the shell script)
+- Resolution and domain size (via the shell script)
+- Output frequency and visualization options (inside the driver code itself)
 
 Two-phase non-coalescing fluid volume implementation is based on [V. Sanjay’s code](https://github.com/VatsalSy/Lifting-a-sessile-drop/blob/master/CaseI/two-phaseDOD.h).
 
@@ -68,10 +68,20 @@ Two-phase non-coalescing fluid volume implementation is based on [V. Sanjay’s 
 
 ```bash
 .
-├── DriverCode/            # Main driver scripts and code for simulations
-├── SupplementaryMovies/   # Supplementary movies referenced in the manuscript
-├── LICENSE                # License information
-├── README.md              # Project documentation
+├── DriverCode/                  # Main driver scripts and code for simulations
+│   ├── 3D_Impact_Bounce.c       # Main simulation source code
+│   ├── run_master_example.sh    # Shell script to run parameter sweeps and manage outputs
+│   └── two-phaseDOD.h           # Header file for two-phase, non-coalescing fluid volume implementation
+│
+├── SupplementaryMovies/         # Supplementary movies and captions referenced in the manuscript
+│   ├── SM1.mp4                  # Movie 1
+│   ├── SM2.mp4                  # Movie 2
+│   ├── SM3.mp4                  # Movie 3
+│   ├── SM4.mp4                  # Movie 4
+│   └── SM_Captions.txt          # Captions and descriptions for supplementary movies
+│
+├── LICENSE                      # License information
+└── README.md                    # Project documentation
 ```
 
 ---
