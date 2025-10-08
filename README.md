@@ -60,7 +60,7 @@ Edit parameters across various layers to control:
 - Resolution and domain size (via the shell script)
 - Output frequency and visualization options (inside the driver code itself)
 
-Two-phase non-coalescing fluid volume implementation is based on [V. Sanjay’s code](https://github.com/VatsalSy/Lifting-a-sessile-drop/blob/master/CaseI/two-phaseDOD.h).
+One key building block is the two-phase non-coalescing fluid volume implementation based on [V. Sanjay’s code](https://github.com/VatsalSy/Lifting-a-sessile-drop/blob/master/CaseI/two-phaseDOD.h).
 
 ---
 
