@@ -1,17 +1,118 @@
 # Bouncing droplets onto a moving pool
-Direct numerical simulation code infrastructure for three-dimensional drop impact onto a moving pool, supporting collaborative work with the Harris Lab at Brown. The code complements the manuscript available at [arXiv:2510.02220](https://arxiv.org/abs/2510.02220).
-<img width="100%" height="100%" alt="3D_SimulationSnapshot" src="https://github.com/user-attachments/assets/86635a45-fe4e-474c-997e-93bfe12b7299" />
 
-## Installation
-* The code relies on [Basilisk](<http://basilisk.fr/>) to model the Navier-Stokes equations. See the [installation page](<http://basilisk.fr/src/INSTALL>) for instructions. 
-* Full visualisation capabilities have been used in order to generate animations. These may be switched off depending on the local architecture.
-* The two-phase non-coalescing fluid volume implementation by V. Sanjay available [here](https://github.com/VatsalSy/Lifting-a-sessile-drop/blob/master/CaseI/two-phaseDOD.h) has been successfully employed in this study to limit numerical artifacts during contact time.
-  
-## Running the code
-Once the Basilisk structure is in place, the driver code here is built in order to navigate parameter sweeps in resolution level, drop velocity $U_{\textrm{drop}}$ and pool velocity $U_{\textrm{pool}}$ , with one of each values added to the run_master_example.sh for brevity. Other parameters can be varied through this shell script, with both physical and computational handles provided. 
+Direct numerical simulation code infrastructure for **three-dimensional drop impact onto a moving pool**, supporting collaborative work with the Harris Lab at Brown. The code complements the manuscript and provides tools for parameter sweeps and visualisation.
 
-The code can be executed by simply executing this shell script via *sh run_master_example.sh* inside a terminal. Output will then be produced within a foldering structure that consists of summary DNS execution information, mass conservation and VOF data, interface coordinates and animations, which can be used for further post-processing.
+<img width="100%" alt="3D_SimulationSnapshot" src="https://github.com/user-attachments/assets/86635a45-fe4e-474c-997e-93bfe12b7299" />
 
-## Supplementary movies
-Supplementary material referred to in the companion manuscript is made available in a [separate subfolder](https://github.com/rcsc-group/BouncingDropletsMovingPool3D/tree/main/SupplementaryMovies) (alongside descriptive captions), providing visualisations of both real-life and numerical experiments.
+---
+
+## 📌 Features
+
+✅ Three-dimensional Navier-Stokes solver for drop-pool impact scenarios  
+✅ Parameter sweep support: resolution, drop velocity, pool velocity  
+✅ Two-phase, non-coalescing fluid volume implementation  
+✅ High-resolution output and animation capabilities  
+✅ Supplementary movies for publication and presentation  
+
+---
+
+## 🛠️ Installation
+
+### 1. Requirements
+
+- [Basilisk](http://basilisk.fr/) (compiled with `qcc`)
+- C compiler
+- Visualization tools (e.g., ffmpeg, imagemagick, gnuplot)
+- Recommended:  
+  ```bash
+  sudo apt install ffmpeg imagemagick gnuplot
+  ```
+
+### 2. Clone the repository
+
+```bash
+git clone https://github.com/rcsc-group/BouncingDropletsMovingPool3D
+cd BouncingDropletsMovingPool3D
+```
+
+### 3. Install Basilisk
+
+See Basilisk’s [installation page](http://basilisk.fr/src/INSTALL) for instructions.
+
+### 4. Running the code
+
+After Basilisk is set up, run the driver code using the provided shell script:
+
+```bash
+sh run_master_example.sh
+```
+
+The script organizes outputs into folders with summaries and movies.
+
+---
+
+## ⚙️ Key Simulation Options
+
+Edit parameters in your driver code to control:
+
+- Drop velocity $U_{\textrm{drop}}$
+- Pool velocity $U_{\textrm{pool}}$
+- Resolution and domain size
+- Output frequency and visualization options
+
+Two-phase non-coalescing fluid volume implementation is based on [V. Sanjay’s code](https://github.com/VatsalSy/Lifting-a-sessile-drop/blob/master/CaseI/two-phaseDOD.h).
+
+---
+
+## 📁 Folder Structure
+
+```bash
+.
+├── DriverCode/            # Main driver scripts and code for simulations
+├── SupplementaryMovies/   # Supplementary movies referenced in the manuscript
+├── LICENSE                # License information
+├── README.md              # Project documentation
+```
+
+---
+
+## 📊 Outputs
+
+Generates:
+
+- Summary files and movies in organized output folders
+- `.mp4` and `.png` animations for simulation data
+- Data files (interface data coordinates) for further analysis
+
+Visualisation can be toggled depending on your architecture and needs.
+
+---
+
+## 📚 Citation
+
+If you use this code or data in your work, please cite the associated preprint (for now):
+
+> Harris, D. M., Alventosa, L. F., Sand, O., Silver, E., Mohammadi, A., Sykes, T. C., ... & Cimpeanu, R. (2025). Bouncing to coalescence transition for droplet impact onto moving liquid pools. arXiv:2510.02220.
+
+BibTeX:
+```bibtex
+@article{Harris2025Bouncing,
+  title={Bouncing to coalescence transition for droplet impact onto moving liquid pools},
+  author={Harris, D. M. and Alventosa, L. F. and Sand, O. and Silver, E. and Mohammadi, A. and Sykes, T. C. and ... and Cimpeanu, R.},
+  journal={arXiv preprint arXiv:2510.02220},
+  year={2025}
+}
+```
+
+---
+
+## 🧑 Contributing
+
+Feel free to:
+
+- Fork this repo
+- Open issues
+- Submit pull requests
+
+---
 
